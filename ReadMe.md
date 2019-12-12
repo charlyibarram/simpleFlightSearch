@@ -1,99 +1,26 @@
-# Flight Search API Application
+# simpleFlightSearch
+I want to asses your ability to create a web application and web service. It truly is the bare minimum of knowledge necessary to be successful in this position. I don't want you to spend a lot of time on this. You should be able to do this in a few hours if the job is right for you.
 
-SpringBoot Application with REST API Development using Spring MVC, Spring Data JPA using Java 8 features
+### Flight Search
 
-## Features
+This programming task consists of building a simple web application to search for flights. Fork this repository and create your application. It should take this input from the user:
 
-This application has two REST end-points to show flight-booking information. 
+(Flight Number ||  (Origin && Destination)) && Date
 
-1. GET /bookings?uid={passenger-id}
-2. GET /bookings/{booking-id}
-
-3. GET /airports
-4. GET /airports/{iata-code}
-5. GET /flights
-6. GET /flights/{flight-id}
-7. GET /passengers
-8. GET /passengers/{passenger-id}
-
-## Technologies used
-
-1. Java (Programming Language)
-2. Spring Boot (Application Platform)
-3. Spring Data JPA (Data persistence)
-4. H2 (Database)
-5. JUnit, with Spring Testing
+The application will call a service that you create using either Node with Express or Java with Spring MVC. I have provided some sample data for the application in this file 
 
 
-## Getting Started
-
-The source code can be checked out to your local and then build and run the application either from your IDE after importing to it as a maven project, or just from a command line. Follow these steps for the command-line option:  
-
-### Prerequisites
-1. Java 8
-2. Maven 3
-3. Git
+[Flight Documents](./flight-docs/flight-sample.json)
 
 
-### Installing & Running
 
-#### Clone this repo into your local: 
-
-
-####  Build with maven 
-	
-```
-mvn clean install
-```
-	
-#### Start app
-	
-```
-mvn spring-boot:run
-```
-	
-#### Access the Home screen
-
-The application will be available at the URL: [Home](http://localhost:8080).
-
-	
-#### Test the URLs
-	
-    1.http://localhost:8080/bookings?uid=PS-10
-    2.http://localhost:8080/bookings/FB-10
-    
-## API Documentation and Integration Testing 
-
-API documentation can be accessed via [Swagger UI](http://localhost:8080/swagger-ui.html) 
-
-## Running the Test Cases
-
-There is just one test case for this project as of now:
-[BookingTest.java](src/test/java/com/dxbair/services/flightbooking/test/BookingTest.java)
-
-You can run it either from:
-
-- Command line
-
-```
-mvn test
-```
-
-- Your IDE
+The file contains an array whose elements represent flights. The data should be defined as a constant in your service. 
 
 
-	Right click on this file and "Run As JUnit Testcase"  
+You must use Angular 4 or higher. Style however you would like. You have total freedom to do what you want but make sure it can do these two things:
 
+	• Validate that the user has provided the right criteria to make a search 
+	• Neatly display the results
 
-## Database
+Create a pull request once you have it working. I will clone your repository, verify that it works, and evaluate it.
 
-This application is using H2 in-memory database, which (database as well as data) will be removed from memory when the application goes down.
-
-While the application is running, you can access the [H2 Console](http://localhost:8080/console) if you want to see the data outside the application. 
-
-You can connect to the DB using the JDBC URL: 'jdbc:h2:mem:flight-booking' and user 'sa' with NO password. 
-
-
-## Data pre-loading
-
-Sample data is pre-loaded from the demonstration purpose by [DataLoader.java](src/main/java/com/dxbair/services/flightbooking/boot/DataLoader.java). In a production-grade application, this will be done through a database upgrade script/task.
