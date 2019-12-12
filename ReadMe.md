@@ -62,38 +62,3 @@ The application will be available at the URL: [Home](http://localhost:8080).
     1.http://localhost:8080/bookings?uid=PS-10
     2.http://localhost:8080/bookings/FB-10
     
-## API Documentation and Integration Testing 
-
-API documentation can be accessed via [Swagger UI](http://localhost:8080/swagger-ui.html) 
-
-## Running the Test Cases
-
-There is just one test case for this project as of now:
-[BookingTest.java](src/test/java/com/dxbair/services/flightbooking/test/BookingTest.java)
-
-You can run it either from:
-
-- Command line
-
-```
-mvn test
-```
-
-- Your IDE
-
-
-	Right click on this file and "Run As JUnit Testcase"  
-
-
-## Database
-
-This application is using H2 in-memory database, which (database as well as data) will be removed from memory when the application goes down.
-
-While the application is running, you can access the [H2 Console](http://localhost:8080/console) if you want to see the data outside the application. 
-
-You can connect to the DB using the JDBC URL: 'jdbc:h2:mem:flight-booking' and user 'sa' with NO password. 
-
-
-## Data pre-loading
-
-Sample data is pre-loaded from the demonstration purpose by [DataLoader.java](src/main/java/com/dxbair/services/flightbooking/boot/DataLoader.java). In a production-grade application, this will be done through a database upgrade script/task.
